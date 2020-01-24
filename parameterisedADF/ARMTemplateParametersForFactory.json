@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "parameterisedADF"
+		},
+		"LS_ADLS_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://dadfadls.azuredatalakestore.net/webhdfs/v1"
+		},
+		"LS_ADLS_properties_typeProperties_tenant": {
+			"value": "f77e87f9-ae31-4f5b-a45e-fbdac0102e34"
+		},
+		"LS_ADLS_properties_typeProperties_subscriptionId": {
+			"value": "3d450ca0-cad9-4d0a-aaf8-6cdbf740f6db"
+		},
+		"LS_ADLS_properties_typeProperties_resourceGroupName": {
+			"value": "dadftest"
+		},
+		"LS_AKV_properties_typeProperties_baseUrl": {
+			"value": "https://dadfkv.vault.azure.net/"
+		},
+		"LS_ASQL_Generic_properties_typeProperties_connectionString_secretName": {
+			"value": "@{linkedService().SecretName}"
+		}
+	}
+}
